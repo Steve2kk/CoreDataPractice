@@ -7,23 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EC9C4852587A8450045D47C /* ChallengesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC9C4842587A8450045D47C /* ChallengesController.swift */; };
 		7ECA7733257E8FEE000D1654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECA7732257E8FEE000D1654 /* AppDelegate.swift */; };
 		7ECA7735257E8FEE000D1654 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECA7734257E8FEE000D1654 /* SceneDelegate.swift */; };
-		7ECA7737257E8FEE000D1654 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECA7736257E8FEE000D1654 /* ViewController.swift */; };
 		7ECA773A257E8FEE000D1654 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECA7738257E8FEE000D1654 /* Main.storyboard */; };
 		7ECA773C257E8FF0000D1654 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ECA773B257E8FF0000D1654 /* Assets.xcassets */; };
 		7ECA773F257E8FF0000D1654 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ECA773D257E8FF0000D1654 /* LaunchScreen.storyboard */; };
+		7ECA774F257F7F9E000D1654 /* AddChallengeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECA774E257F7F9E000D1654 /* AddChallengeController.swift */; };
+		7ECA7753257FF897000D1654 /* CoreDataModels.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7ECA7751257FF897000D1654 /* CoreDataModels.xcdatamodeld */; };
+		7ECA7756258002A5000D1654 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECA7755258002A5000D1654 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7EC9C4842587A8450045D47C /* ChallengesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesController.swift; sourceTree = "<group>"; };
 		7ECA772F257E8FEE000D1654 /* CoreDataTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECA7732257E8FEE000D1654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7ECA7734257E8FEE000D1654 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7ECA7736257E8FEE000D1654 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7ECA7739257E8FEE000D1654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7ECA773B257E8FF0000D1654 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ECA773E257E8FF0000D1654 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7ECA7740257E8FF0000D1654 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7ECA774E257F7F9E000D1654 /* AddChallengeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChallengeController.swift; sourceTree = "<group>"; };
+		7ECA7752257FF897000D1654 /* CoreDataModels.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModels.xcdatamodel; sourceTree = "<group>"; };
+		7ECA7755258002A5000D1654 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +64,14 @@
 			children = (
 				7ECA7732257E8FEE000D1654 /* AppDelegate.swift */,
 				7ECA7734257E8FEE000D1654 /* SceneDelegate.swift */,
-				7ECA7736257E8FEE000D1654 /* ViewController.swift */,
-				7ECA7738257E8FEE000D1654 /* Main.storyboard */,
-				7ECA773B257E8FF0000D1654 /* Assets.xcassets */,
+				7EC9C4842587A8450045D47C /* ChallengesController.swift */,
+				7ECA774E257F7F9E000D1654 /* AddChallengeController.swift */,
+				7ECA7755258002A5000D1654 /* CoreDataManager.swift */,
+				7ECA7751257FF897000D1654 /* CoreDataModels.xcdatamodeld */,
 				7ECA773D257E8FF0000D1654 /* LaunchScreen.storyboard */,
+				7ECA7738257E8FEE000D1654 /* Main.storyboard */,
 				7ECA7740257E8FF0000D1654 /* Info.plist */,
+				7ECA773B257E8FF0000D1654 /* Assets.xcassets */,
 			);
 			path = CoreDataTraining;
 			sourceTree = "<group>";
@@ -137,8 +146,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ECA7737257E8FEE000D1654 /* ViewController.swift in Sources */,
+				7ECA774F257F7F9E000D1654 /* AddChallengeController.swift in Sources */,
 				7ECA7733257E8FEE000D1654 /* AppDelegate.swift in Sources */,
+				7ECA7753257FF897000D1654 /* CoreDataModels.xcdatamodeld in Sources */,
+				7EC9C4852587A8450045D47C /* ChallengesController.swift in Sources */,
+				7ECA7756258002A5000D1654 /* CoreDataManager.swift in Sources */,
 				7ECA7735257E8FEE000D1654 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +351,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7ECA7751257FF897000D1654 /* CoreDataModels.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7ECA7752257FF897000D1654 /* CoreDataModels.xcdatamodel */,
+			);
+			currentVersion = 7ECA7752257FF897000D1654 /* CoreDataModels.xcdatamodel */;
+			path = CoreDataModels.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 7ECA7727257E8FEE000D1654 /* Project object */;
 }

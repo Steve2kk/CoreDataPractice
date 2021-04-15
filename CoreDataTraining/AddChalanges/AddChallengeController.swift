@@ -8,14 +8,10 @@
 import UIKit
 import CoreData
 
-protocol CreateChallengeControllerDelegate {
-    func didAddChallenge(challenge: Challenge)
-    func didEditChallenge(challenge: Challenge)
-}
-
-
 class AddChallengeController: UIViewController {
+    
     var delegate: CreateChallengeControllerDelegate?
+    
     var challenge: Challenge? {
         didSet {
             nameTextField.text = challenge?.name
@@ -27,7 +23,7 @@ class AddChallengeController: UIViewController {
     let nameLabel: UILabel =  {
         let label = UILabel()
         label.text = "Name:"
-        label.textColor = .white
+        label.textColor = UIColor.black
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -49,43 +45,14 @@ class AddChallengeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
+        view.backgroundColor = UIColor.darkBlue
         setupNavBar()
-        setupUI()
+        setupLayout()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationItem.title = challenge == nil ? "Create Challenge" : "Edit Challenge"
-    }
-    fileprivate func setupUI() {
-        let backGroundMenuView = UIView()
-        view.addSubview(backGroundMenuView)
-        backGroundMenuView.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.4980392158, blue: 0.7568627596, alpha: 1)
-        backGroundMenuView.translatesAutoresizingMaskIntoConstraints = false
-        backGroundMenuView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        backGroundMenuView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        backGroundMenuView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        backGroundMenuView.heightAnchor.constraint(equalToConstant: 360).isActive = true
-        
-        view.addSubview(nameLabel)
-        nameLabel.topAnchor.constraint(equalTo: backGroundMenuView.topAnchor).isActive = true
-        nameLabel.leadingAnchor.constraint(equalTo: backGroundMenuView.leadingAnchor,constant: 16).isActive = true
-        nameLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        nameLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
-        view.addSubview(nameTextField)
-        nameTextField.topAnchor.constraint(equalTo: nameLabel.topAnchor).isActive = true
-        nameTextField.bottomAnchor.constraint(equalTo: nameLabel.bottomAnchor).isActive = true
-        nameTextField.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor,constant: 4).isActive = true
-        nameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        nameTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
-        view.addSubview(datePicker)
-        datePicker.topAnchor.constraint(equalTo: nameLabel.bottomAnchor).isActive = true
-        datePicker.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        datePicker.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
-        datePicker.bottomAnchor.constraint(equalTo: backGroundMenuView.bottomAnchor).isActive = true
     }
     
     fileprivate func setupNavBar() {
@@ -134,4 +101,37 @@ class AddChallengeController: UIViewController {
             print("Failed to save",saveErr)
         }
     }
+}
+
+extension AddChallengeController {
+     fileprivate func setupLayout() {
+        let backGroundMenuView = UIView()
+        view.addSubview(backGroundMenuView)
+        backGroundMenuView.backgroundColor = UIColor.lightBlue
+        backGroundMenuView.translatesAutoresizingMaskIntoConstraints = false
+        backGroundMenuView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        backGroundMenuView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        backGroundMenuView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        backGroundMenuView.heightAnchor.constraint(equalToConstant: 360).isActive = true
+        
+        view.addSubview(nameLabel)
+        nameLabel.topAnchor.constraint(equalTo: backGroundMenuView.topAnchor).isActive = true
+        nameLabel.leadingAnchor.constraint(equalTo: backGroundMenuView.leadingAnchor,constant: 16).isActive = true
+        nameLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        nameLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        view.addSubview(nameTextField)
+        nameTextField.topAnchor.constraint(equalTo: nameLabel.topAnchor).isActive = true
+        nameTextField.bottomAnchor.constraint(equalTo: nameLabel.bottomAnchor).isActive = true
+        nameTextField.leadingAnchor.constraint(equalTo: nameLabel.trailingAnchor,constant: 4).isActive = true
+        nameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        nameTextField.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        view.addSubview(datePicker)
+        datePicker.topAnchor.constraint(equalTo: nameLabel.bottomAnchor).isActive = true
+        datePicker.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        datePicker.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        datePicker.bottomAnchor.constraint(equalTo: backGroundMenuView.bottomAnchor).isActive = true
+    }
+    
 }

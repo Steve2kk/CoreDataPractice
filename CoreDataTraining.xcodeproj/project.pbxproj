@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E95A0B126131E5D00DA4972 /* CreateChallengeControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E95A0B026131E5D00DA4972 /* CreateChallengeControllerDelegate.swift */; };
+		7E95A0B6261335D000DA4972 /* ChallengesController + CreateChallenges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E95A0B5261335D000DA4972 /* ChallengesController + CreateChallenges.swift */; };
+		7E95A0B92613384600DA4972 /* ChallengesController + UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E95A0B82613384600DA4972 /* ChallengesController + UITableView.swift */; };
+		7E95A0F62621BB6D00DA4972 /* Colors + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E95A0F52621BB6C00DA4972 /* Colors + String.swift */; };
+		7E95A0FB2621C41900DA4972 /* CustomChallengesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E95A0FA2621C41900DA4972 /* CustomChallengesCell.swift */; };
 		7EC9C4852587A8450045D47C /* ChallengesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC9C4842587A8450045D47C /* ChallengesController.swift */; };
 		7ECA7733257E8FEE000D1654 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECA7732257E8FEE000D1654 /* AppDelegate.swift */; };
 		7ECA7735257E8FEE000D1654 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECA7734257E8FEE000D1654 /* SceneDelegate.swift */; };
@@ -19,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E95A0B026131E5D00DA4972 /* CreateChallengeControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateChallengeControllerDelegate.swift; sourceTree = "<group>"; };
+		7E95A0B5261335D000DA4972 /* ChallengesController + CreateChallenges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChallengesController + CreateChallenges.swift"; sourceTree = "<group>"; };
+		7E95A0B82613384600DA4972 /* ChallengesController + UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChallengesController + UITableView.swift"; sourceTree = "<group>"; };
+		7E95A0F52621BB6C00DA4972 /* Colors + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Colors + String.swift"; sourceTree = "<group>"; };
+		7E95A0FA2621C41900DA4972 /* CustomChallengesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChallengesCell.swift; sourceTree = "<group>"; };
 		7EC9C4842587A8450045D47C /* ChallengesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesController.swift; sourceTree = "<group>"; };
 		7ECA772F257E8FEE000D1654 /* CoreDataTraining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataTraining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ECA7732257E8FEE000D1654 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +53,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E95A0AC26131CD600DA4972 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7ECA773B257E8FF0000D1654 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7E95A0AD26131D5300DA4972 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7ECA7755258002A5000D1654 /* CoreDataManager.swift */,
+				7ECA7751257FF897000D1654 /* CoreDataModels.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7E95A0AF26131DE600DA4972 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7EC9C4842587A8450045D47C /* ChallengesController.swift */,
+				7E95A0B026131E5D00DA4972 /* CreateChallengeControllerDelegate.swift */,
+				7E95A0B5261335D000DA4972 /* ChallengesController + CreateChallenges.swift */,
+				7E95A0B82613384600DA4972 /* ChallengesController + UITableView.swift */,
+				7E95A0FA2621C41900DA4972 /* CustomChallengesCell.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		7E95A0BB26133D3300DA4972 /* AddChalanges */ = {
+			isa = PBXGroup;
+			children = (
+				7ECA774E257F7F9E000D1654 /* AddChallengeController.swift */,
+			);
+			path = AddChalanges;
+			sourceTree = "<group>";
+		};
+		7E95A0F42621BB1F00DA4972 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7E95A0F52621BB6C00DA4972 /* Colors + String.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		7ECA7726257E8FEE000D1654 = {
 			isa = PBXGroup;
 			children = (
@@ -62,16 +117,16 @@
 		7ECA7731257E8FEE000D1654 /* CoreDataTraining */ = {
 			isa = PBXGroup;
 			children = (
+				7E95A0AF26131DE600DA4972 /* Main */,
+				7E95A0BB26133D3300DA4972 /* AddChalanges */,
+				7E95A0AD26131D5300DA4972 /* CoreData */,
+				7E95A0AC26131CD600DA4972 /* Resources */,
+				7E95A0F42621BB1F00DA4972 /* Helpers */,
 				7ECA7732257E8FEE000D1654 /* AppDelegate.swift */,
 				7ECA7734257E8FEE000D1654 /* SceneDelegate.swift */,
-				7EC9C4842587A8450045D47C /* ChallengesController.swift */,
-				7ECA774E257F7F9E000D1654 /* AddChallengeController.swift */,
-				7ECA7755258002A5000D1654 /* CoreDataManager.swift */,
-				7ECA7751257FF897000D1654 /* CoreDataModels.xcdatamodeld */,
 				7ECA773D257E8FF0000D1654 /* LaunchScreen.storyboard */,
 				7ECA7738257E8FEE000D1654 /* Main.storyboard */,
 				7ECA7740257E8FF0000D1654 /* Info.plist */,
-				7ECA773B257E8FF0000D1654 /* Assets.xcassets */,
 			);
 			path = CoreDataTraining;
 			sourceTree = "<group>";
@@ -150,8 +205,13 @@
 				7ECA7733257E8FEE000D1654 /* AppDelegate.swift in Sources */,
 				7ECA7753257FF897000D1654 /* CoreDataModels.xcdatamodeld in Sources */,
 				7EC9C4852587A8450045D47C /* ChallengesController.swift in Sources */,
+				7E95A0B126131E5D00DA4972 /* CreateChallengeControllerDelegate.swift in Sources */,
 				7ECA7756258002A5000D1654 /* CoreDataManager.swift in Sources */,
+				7E95A0FB2621C41900DA4972 /* CustomChallengesCell.swift in Sources */,
 				7ECA7735257E8FEE000D1654 /* SceneDelegate.swift in Sources */,
+				7E95A0F62621BB6D00DA4972 /* Colors + String.swift in Sources */,
+				7E95A0B6261335D000DA4972 /* ChallengesController + CreateChallenges.swift in Sources */,
+				7E95A0B92613384600DA4972 /* ChallengesController + UITableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

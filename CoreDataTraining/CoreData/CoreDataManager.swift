@@ -17,4 +17,16 @@ struct CoreDataManager {
         }
         return container
     }()
+    
+    func fetchChallenges() -> [Challenge] {
+        let context = persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<Challenge>(entityName: "Challenge")
+        do {
+            let challenges = try context.fetch(fetchRequest)
+            return challenges
+        } catch let fetchErr {
+            print("Failed to fetch:",fetchErr)
+            return []
+        }
+    }
 }
